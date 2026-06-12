@@ -1,5 +1,6 @@
 from fastapi import FastAPI, UploadFile, File
 from analyzers.colors import extract_palette
+from analyzers.style import analyze_style
 import os
 
 app = FastAPI()
