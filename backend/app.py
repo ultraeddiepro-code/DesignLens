@@ -26,6 +26,7 @@ async def analyze(
         f.write(await file.read())
 
     palette = extract_palette(filepath)
+    style_data = analyze_style(filepath)
 
     return {
         "filename": file.filename,
