@@ -1,6 +1,5 @@
 from fastapi import FastAPI, UploadFile, File
 from analyzers.colors import extract_palette
-from analyzers.style import analyze_style
 import os
 
 app = FastAPI()
@@ -11,7 +10,6 @@ os.makedirs(
     UPLOAD_DIR,
     exist_ok=True
 )
-
 
 @app.post("/analyze")
 async def analyze(
