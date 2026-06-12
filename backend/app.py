@@ -29,6 +29,7 @@ async def analyze(
     style_data = analyze_style(filepath)
 
     return {
-        "filename": file.filename,
-        "palette": palette
-    }
+    "filename": file.filename,
+    "palette": palette,
+    "style": style_data
+}
