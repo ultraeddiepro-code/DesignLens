@@ -48,6 +48,6 @@ async def analyze(
 
     return {
     "filename": file.filename,
-    "palette": palette,
+    **palette_data,
     "style": style_data
 }
