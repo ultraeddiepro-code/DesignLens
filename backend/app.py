@@ -15,15 +15,6 @@ app.add_middleware(
 )
 
 UPLOAD_DIR = "uploads"
-from fastapi.middleware.cors import CORSMiddleware
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 os.makedirs(
     UPLOAD_DIR,
@@ -31,9 +22,7 @@ os.makedirs(
 )
 
 @app.post("/analyze")
-async def analyze(
-    file: UploadFile = File(...)
-):
+async def analyze(file: UploadFile = File(...)):
 
     filepath = os.path.join(
         UPLOAD_DIR,
@@ -43,11 +32,11 @@ async def analyze(
     with open(filepath, "wb") as f:
         f.write(await file.read())
 
-    palette = extract_palette(filepath)
+    palette_data = extract_palette(filepath)
     style_data = analyze_style(filepath)
 
     return {
-    "filename": file.filename,
-    **palette_data,
-    "style": style_data
-}
+        "filename": file.filename,
+        **palette_data,
+        "style": style_data
+    }
