@@ -47,6 +47,11 @@ export default function Home() {
       }
 
       const data = await response.json();
+
+      console.log("API RESPONSE:", data);
+      console.log("PALETTE:", data.palette);
+      console.log("IS ARRAY:", Array.isArray(data.palette));
+
       setResult(data);
     } catch (error) {
       console.error(error);
