@@ -141,8 +141,9 @@ export default function Home() {
               </h2>
 
               <div className="flex flex-wrap gap-4">
-                {result.palette.map(
-                  (color, index) => (
+                {Array.isArray(result.palette) &&
+                  result.palette.map(
+                    (color, index) => (
                     <div
                       key={index}
                       className="bg-zinc-900 p-3 rounded-xl border border-gray-700"
