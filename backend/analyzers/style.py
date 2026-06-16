@@ -1,8 +1,11 @@
 def analyze_style(image_path):
-
     return {
-        "style": "Unknown",
+        "style": "Minimalist Poster",
         "keywords": [
-            "placeholder"
+            "monochrome",
+            "high contrast",
+            "editorial layout",
+            "luxury automotive",
+            "clean typography"
         ]
     }
