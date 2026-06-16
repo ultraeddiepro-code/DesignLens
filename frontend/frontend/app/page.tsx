@@ -130,9 +130,19 @@ export default function Home() {
 
                 <p>
                   <strong>Style:</strong>{" "}
-                  {result.style.style}
+                  {result.style?.style || "Unknown"}
                 </p>
               </div>
+            </div>
+
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold mb-4">
+                Raw Response
+              </h2>
+
+              <pre className="bg-zinc-900 p-4 rounded-xl overflow-auto text-sm">
+                {JSON.stringify(result, null, 2)}
+              </pre>
             </div>
 
             <div className="mb-8">
@@ -141,9 +151,8 @@ export default function Home() {
               </h2>
 
               <div className="flex flex-wrap gap-4">
-                {Array.isArray(result.palette) &&
-                  result.palette.map(
-                    (color, index) => (
+                {Array.isArray(result.palette) ? (
+                  result.palette.map((color, index) => (
                     <div
                       key={index}
                       className="bg-zinc-900 p-3 rounded-xl border border-gray-700"
@@ -151,8 +160,7 @@ export default function Home() {
                       <div
                         className="w-28 h-28 rounded-lg border"
                         style={{
-                          backgroundColor:
-                            color.hex,
+                          backgroundColor: color.hex,
                         }}
                       />
 
@@ -161,12 +169,14 @@ export default function Home() {
                       </p>
 
                       <p className="text-sm text-gray-400">
-                        RGB(
-                        {color.rgb.join(", ")}
-                        )
+                        RGB({color.rgb.join(", ")})
                       </p>
                     </div>
-                  )
+                  ))
+                ) : (
+                  <p className="text-red-400">
+                    Palette is not an array
+                  </p>
                 )}
               </div>
             </div>
@@ -177,7 +187,7 @@ export default function Home() {
               </h2>
 
               <div className="flex flex-wrap gap-2">
-                {result.style.keywords.map(
+                {result.style?.keywords?.map(
                   (keyword, index) => (
                     <span
                       key={index}
