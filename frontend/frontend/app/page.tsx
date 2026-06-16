@@ -121,15 +121,25 @@ export default function Home() {
               </h2>
 
               <div className="bg-zinc-900 p-4 rounded-xl">
-                <p>
-                  <strong>Filename:</strong>{" "}
-                  {result.filename}
-                </p>
+               <p>
+                   <strong>Filename:</strong>{" "}
+                   {result.filename}
+               </p>
 
-                <p>
+               <p>
                   <strong>Style:</strong>{" "}
                   {result.style.style}
                 </p>
+
+                <p>
+                   <strong>Brightness:</strong>{" "}
+                    {result.style.brightness}
+                </p>
+
+                 <p>
+                    <strong>Saturation:</strong>{" "}
+                    {result.style.saturation}
+                 </p>
               </div>
             </div>
 
