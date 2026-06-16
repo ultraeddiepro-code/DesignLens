@@ -13,6 +13,8 @@ interface AnalysisResult {
   style: {
     style: string;
     keywords: string[];
+    brightness: number;
+    saturation: number;
   };
 }
 
