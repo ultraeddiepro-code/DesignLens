@@ -145,19 +145,45 @@ export default function Home() {
               </pre>
             </div>
 
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-4">
-                Color Palette
-              </h2>
+<div className="mb-8">
+  <h2 className="text-2xl font-bold mb-4">
+    Color Palette
+  </h2>
 
-              <div className="flex flex-wrap gap-4">
-                {Array.isArray(result.palette) ? (
-                  result.palette.map((color, index) => (
-                    <div
-                      key={index}
-                      className="bg-zinc-900 p-3 rounded-xl border border-gray-700"
-                    >
-                      <div
+  <pre className="bg-zinc-900 p-4 rounded-xl mb-4 overflow-auto">
+    {JSON.stringify(result.palette, null, 2)}
+  </pre>
+
+  {Array.isArray(result.palette) ? (
+    <div className="flex flex-wrap gap-4">
+      {result.palette.map((color, index) => (
+        <div
+          key={index}
+          className="bg-zinc-900 p-3 rounded-xl border border-gray-700"
+        >
+          <div
+            className="w-28 h-28 rounded-lg border"
+            style={{
+              backgroundColor: color.hex,
+            }}
+          />
+
+          <p className="mt-2 font-mono">
+            {color.hex}
+          </p>
+
+          <p className="text-sm text-gray-400">
+            RGB({color.rgb.join(", ")})
+          </p>
+        </div>
+      ))}
+    </div>
+  ) : (
+    <div className="text-red-400">
+      Palette is not an array
+    </div>
+  )}
+</div>
                         className="w-28 h-28 rounded-lg border"
                         style={{
                           backgroundColor: color.hex,
