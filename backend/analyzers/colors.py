@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.cluster import KMeans
 from analyzers.color_names import get_color_name
 
+
 def extract_palette(image_path, n_colors=5):
     """
     Extract dominant colors from an image.
@@ -12,7 +13,8 @@ def extract_palette(image_path, n_colors=5):
         "palette": [
             {
                 "hex": "#1F1E1F",
-                "rgb": [31, 30, 31]
+                "rgb": [31, 30, 31],
+                "name": "Black"
             }
         ]
     }
@@ -49,9 +51,12 @@ def extract_palette(image_path, n_colors=5):
     for color in colors:
         r, g, b = map(int, color)
 
+        hex_color = f"#{r:02X}{g:02X}{b:02X}"
+
         palette.append({
-            "hex": f"#{r:02X}{g:02X}{b:02X}",
-            "rgb": [r, g, b]
+            "hex": hex_color,
+            "rgb": [r, g, b],
+            "name": get_color_name(hex_color)
         })
 
     return {
