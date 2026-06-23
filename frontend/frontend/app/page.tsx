@@ -8,7 +8,6 @@ interface PaletteColor {
   name: string;
 }
 
-
 interface AnalysisResult {
   filename: string;
   palette: PaletteColor[];
@@ -51,7 +50,6 @@ export default function Home() {
       }
 
       const data = await response.json();
-
       setResult(data);
     } catch (error) {
       console.error(error);
@@ -63,7 +61,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black text-white p-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h1 className="text-5xl font-bold mb-2">
           DesignLens
         </h1>
@@ -72,7 +70,7 @@ export default function Home() {
           Upload an image and extract design insights.
         </p>
 
-        <div className="border border-gray-700 rounded-xl p-6 mb-8">
+        <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-6 mb-8">
           <input
             type="file"
             accept="image/*"
@@ -93,7 +91,7 @@ export default function Home() {
           <button
             onClick={analyzeImage}
             disabled={loading}
-            className="mt-4 px-6 py-3 rounded bg-blue-600 hover:bg-blue-500 disabled:opacity-50"
+            className="mt-4 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 disabled:opacity-50"
           >
             {loading
               ? "Analyzing..."
@@ -110,7 +108,7 @@ export default function Home() {
             <img
               src={previewUrl}
               alt="Preview"
-              className="max-w-md rounded-xl border border-gray-700"
+              className="max-w-lg rounded-xl border border-zinc-700"
             />
           </div>
         )}
@@ -122,30 +120,51 @@ export default function Home() {
                 Analysis Result
               </h2>
 
-              <div className="bg-zinc-900 p-4 rounded-xl">
-               <p>
-                   <strong>Filename:</strong>{" "}
-                   {result.filename}
-               </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-zinc-900 p-4 rounded-xl">
+                  <p>
+                    <strong>Filename:</strong>{" "}
+                    {result.filename}
+                  </p>
 
-               <p>
-                  <strong>Style:</strong>{" "}
-                  {result.style.style}
-                </p>
+                  <p>
+                    <strong>Style:</strong>{" "}
+                    {result.style.style}
+                  </p>
 
-                <p>
-                   <strong>Brightness:</strong>{" "}
+                  <p>
+                    <strong>Brightness:</strong>{" "}
                     {result.style.brightness}
-                </p>
+                  </p>
 
-                 <p>
+                  <p>
                     <strong>Saturation:</strong>{" "}
                     {result.style.saturation}
-                 </p>
+                  </p>
+                </div>
+
+                <div className="bg-zinc-900 p-4 rounded-xl">
+                  <h3 className="font-semibold mb-3">
+                    Keywords
+                  </h3>
+
+                  <div className="flex flex-wrap gap-2">
+                    {result.style.keywords.map(
+                      (keyword, index) => (
+                        <span
+                          key={index}
+                          className="bg-zinc-800 px-3 py-1 rounded-lg"
+                        >
+                          {keyword}
+                        </span>
+                      )
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="mb-8">
+            <div>
               <h2 className="text-2xl font-bold mb-4">
                 Color Palette
               </h2>
@@ -155,49 +174,30 @@ export default function Home() {
                   (color, index) => (
                     <div
                       key={index}
-                      className="bg-zinc-900 p-3 rounded-xl border border-gray-700"
+                      className="bg-zinc-900 p-4 rounded-xl border border-zinc-700 w-40"
                     >
                       <div
-                        className="w-28 h-28 rounded-lg border"
+                        className="w-full h-24 rounded-lg border"
                         style={{
                           backgroundColor:
                             color.hex,
                         }}
                       />
 
-                      <p className="mt-2 font-mono">
+                      <p className="mt-3 font-mono text-sm">
                         {color.hex}
                       </p>
 
-                      <p className="text-sm text-blue-400">
-                          {color.name}
+                      <p className="text-blue-400 text-sm">
+                        {color.name}
                       </p>
 
-                      <p className="text-sm text-gray-400">
+                      <p className="text-gray-400 text-xs">
                         RGB(
                         {color.rgb.join(", ")}
                         )
                       </p>
                     </div>
-                  )
-                )}
-              </div>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold mb-4">
-                Keywords
-              </h2>
-
-              <div className="flex flex-wrap gap-2">
-                {result.style.keywords.map(
-                  (keyword, index) => (
-                    <span
-                      key={index}
-                      className="bg-zinc-800 px-3 py-2 rounded-lg"
-                    >
-                      {keyword}
-                    </span>
                   )
                 )}
               </div>
