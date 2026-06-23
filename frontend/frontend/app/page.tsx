@@ -8,6 +8,7 @@ interface PaletteColor {
   name: string;
 }
 
+
 interface AnalysisResult {
   filename: string;
   palette: PaletteColor[];
