@@ -5,6 +5,7 @@ import { useState } from "react";
 interface PaletteColor {
   hex: string;
   rgb: number[];
+  name: string;
 }
 
 interface AnalysisResult {
