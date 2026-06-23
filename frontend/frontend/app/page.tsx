@@ -168,6 +168,10 @@ export default function Home() {
                         {color.hex}
                       </p>
 
+                      <p className="text-sm text-blue-400">
+                          {color.name}
+                      </p>
+
                       <p className="text-sm text-gray-400">
                         RGB(
                         {color.rgb.join(", ")}
