@@ -54,9 +54,18 @@ def analyze_style(image_path):
             "clean"
         ]
 
+    summary = (
+    f"This image uses a {style.lower()} style. "
+    f"Brightness level is {round(float(brightness), 2)} "
+    f"and saturation level is {round(float(saturation), 2)}. "
+    f"Key characteristics include: "
+    f"{', '.join(keywords)}."
+)
+
     return {
-        "style": style,
-        "keywords": keywords,
-        "brightness": round(float(brightness), 2),
-        "saturation": round(float(saturation), 2)
-    }
+    "style": style,
+    "keywords": keywords,
+    "brightness": round(float(brightness), 2),
+    "saturation": round(float(saturation), 2),
+    "summary": summary
+}
