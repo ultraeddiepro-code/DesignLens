@@ -16,6 +16,7 @@ interface AnalysisResult {
     keywords: string[];
     brightness: number;
     saturation: number;
+    summary: string;
   };
 }
 
