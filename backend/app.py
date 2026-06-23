@@ -48,8 +48,9 @@ async def analyze(file: UploadFile = File(...)):
     content_type = detect_content_type(filepath)
 
     return {
-        "filename": file.filename,
-        **palette_data,
-        "style": style_data,
-        "content_type": content_type
-    }
+    "filename": file.filename,
+    **palette_data,
+    "style": style_data,
+    "content_type": content_type,
+    "mood": mood
+}
