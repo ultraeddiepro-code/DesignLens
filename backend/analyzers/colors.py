@@ -1,7 +1,7 @@
 from PIL import Image
 import numpy as np
 from sklearn.cluster import KMeans
-
+from analyzers.color_names import get_color_name
 
 def extract_palette(image_path, n_colors=5):
     """
