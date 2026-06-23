@@ -1,7 +1,10 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
+
 from analyzers.colors import extract_palette
 from analyzers.style import analyze_style
+from analyzers.content import detect_content_type
+
 import os
 
 app = FastAPI()
@@ -21,6 +24,7 @@ os.makedirs(
     exist_ok=True
 )
 
+
 @app.post("/analyze")
 async def analyze(file: UploadFile = File(...)):
 
@@ -33,10 +37,14 @@ async def analyze(file: UploadFile = File(...)):
         f.write(await file.read())
 
     palette_data = extract_palette(filepath)
+
     style_data = analyze_style(filepath)
+
+    content_type = detect_content_type(filepath)
 
     return {
         "filename": file.filename,
         **palette_data,
-        "style": style_data
+        "style": style_data,
+        "content_type": content_type
     }
