@@ -5,6 +5,7 @@ from analyzers.colors import extract_palette
 from analyzers.style import analyze_style
 from analyzers.content import detect_content_type
 from analyzers.mood import detect_mood
+from analyzers.layout import analyze_layout
 
 import os
 
