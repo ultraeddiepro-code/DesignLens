@@ -10,7 +10,17 @@ interface PaletteColor {
 
 interface AnalysisResult {
   filename: string;
+
   palette: PaletteColor[];
+
+  content_type: string;
+
+  mood: string;
+
+  layout: {
+    layout: string;
+  };
+
   style: {
     style: string;
     keywords: string[];
@@ -24,7 +34,8 @@ export default function Home() {
   const [file, setFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState("");
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<AnalysisResult | null>(null);
+  const [result, setResult] =
+    useState<AnalysisResult | null>(null);
 
   const analyzeImage = async () => {
     if (!file) {
@@ -36,6 +47,7 @@ export default function Home() {
       setLoading(true);
 
       const formData = new FormData();
+
       formData.append("file", file);
 
       const response = await fetch(
@@ -51,6 +63,7 @@ export default function Home() {
       }
 
       const data = await response.json();
+
       setResult(data);
     } catch (error) {
       console.error(error);
@@ -63,6 +76,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white p-8">
       <div className="max-w-7xl mx-auto">
+
         <h1 className="text-5xl font-bold mb-2">
           DesignLens
         </h1>
@@ -122,7 +136,9 @@ export default function Home() {
               </h2>
 
               <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-zinc-900 p-4 rounded-xl">
+
+                <div className="bg-zinc-900 p-4 rounded-xl border border-zinc-700">
+
                   <p>
                     <strong>Filename:</strong>{" "}
                     {result.filename}
@@ -134,6 +150,21 @@ export default function Home() {
                   </p>
 
                   <p>
+                    <strong>Content Type:</strong>{" "}
+                    {result.content_type}
+                  </p>
+
+                  <p>
+                    <strong>Mood:</strong>{" "}
+                    {result.mood}
+                  </p>
+
+                  <p>
+                    <strong>Layout:</strong>{" "}
+                    {result.layout.layout}
+                  </p>
+
+                  <p>
                     <strong>Brightness:</strong>{" "}
                     {result.style.brightness}
                   </p>
@@ -142,9 +173,11 @@ export default function Home() {
                     <strong>Saturation:</strong>{" "}
                     {result.style.saturation}
                   </p>
+
                 </div>
 
-                <div className="bg-zinc-900 p-4 rounded-xl">
+                <div className="bg-zinc-900 p-4 rounded-xl border border-zinc-700">
+
                   <h3 className="font-semibold mb-3">
                     Keywords
                   </h3>
@@ -161,18 +194,20 @@ export default function Home() {
                       )
                     )}
                   </div>
+
                 </div>
+
               </div>
             </div>
-            
+
             <div className="mb-8">
-                  <h2 className="text-2xl font-bold mb-4">
-                    Design Summary
-                  </h2>
+              <h2 className="text-2xl font-bold mb-4">
+                Design Summary
+              </h2>
 
               <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-6">
                 <p className="text-gray-300 leading-relaxed">
-                    {result.style.summary}
+                  {result.style.summary}
                 </p>
               </div>
             </div>
@@ -183,6 +218,7 @@ export default function Home() {
               </h2>
 
               <div className="flex flex-wrap gap-4">
+
                 {result.palette.map(
                   (color, index) => (
                     <div
@@ -213,10 +249,12 @@ export default function Home() {
                     </div>
                   )
                 )}
+
               </div>
             </div>
           </>
         )}
+
       </div>
     </main>
   );
