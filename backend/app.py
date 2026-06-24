@@ -10,6 +10,7 @@ from analyzers.layout import analyze_layout
 import os
 
 app = FastAPI()
+layout_data = analyze_layout("filepath")
 
 app.add_middleware(
     CORSMiddleware,
