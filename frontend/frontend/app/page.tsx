@@ -18,7 +18,7 @@ interface AnalysisResult {
   mood: string;
 
   design_score: number;
-  
+
   layout: {
     layout: string;
   };
@@ -166,6 +166,11 @@ export default function Home() {
                     {result.layout.layout}
                   </p>
 
+                  <p>
+                   <strong>Design Score:</strong>{" "}
+                   {result.design_score}/100
+                  </p>
+                  
                   <p>
                     <strong>Brightness:</strong>{" "}
                     {result.style.brightness}
