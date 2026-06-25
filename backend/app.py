@@ -21,6 +21,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+design_score = calculate_design_score(
+    style_data["brightness"],
+    style_data["saturation"]
+)
+
 UPLOAD_DIR = "uploads"
 
 os.makedirs(
@@ -54,6 +59,8 @@ async def analyze(file: UploadFile = File(...)):
     "filename": file.filename,
     **palette_data,
     "style": style_data,
+    "design_score": design_score,
     "content_type": content_type,
     "mood": mood
+    
 }
