@@ -17,6 +17,8 @@ interface AnalysisResult {
 
   mood: string;
 
+  design_score: number;
+  
   layout: {
     layout: string;
   };
