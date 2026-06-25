@@ -11,7 +11,6 @@ from analyzers.scoring import calculate_design_score
 import os
 
 app = FastAPI()
-layout_data = analyze_layout("filepath")
 
 app.add_middleware(
     CORSMiddleware,
@@ -19,11 +18,6 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-)
-
-design_score = calculate_design_score(
-    style_data["brightness"],
-    style_data["saturation"]
 )
 
 UPLOAD_DIR = "uploads"
@@ -45,22 +39,36 @@ async def analyze(file: UploadFile = File(...)):
     with open(filepath, "wb") as f:
         f.write(await file.read())
 
+    # Extract palette
     palette_data = extract_palette(filepath)
 
+    # Analyze style
     style_data = analyze_style(filepath)
-    mood = detect_mood(
-    style_data["brightness"],
-    style_data["saturation"]
-)
 
+    # Detect mood
+    mood = detect_mood(
+        style_data["brightness"],
+        style_data["saturation"]
+    )
+
+    # Detect content type
     content_type = detect_content_type(filepath)
 
+    # Analyze layout
+    layout_data = analyze_layout(filepath)
+
+    # Calculate design score
+    design_score = calculate_design_score(
+        style_data["brightness"],
+        style_data["saturation"]
+    )
+
     return {
-    "filename": file.filename,
-    **palette_data,
-    "style": style_data,
-    "design_score": design_score,
-    "content_type": content_type,
-    "mood": mood
-    
-}
+        "filename": file.filename,
+        **palette_data,
+        "style": style_data,
+        "content_type": content_type,
+        "mood": mood,
+        "layout": layout_data,
+        "design_score": design_score
+    }
