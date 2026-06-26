@@ -7,6 +7,7 @@ from analyzers.content import detect_content_type
 from analyzers.mood import detect_mood
 from analyzers.layout import analyze_layout
 from analyzers.scoring import calculate_design_score
+from analyzers.accessibility import analyze_accessibility
 
 import os
 
