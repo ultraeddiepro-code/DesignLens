@@ -64,6 +64,11 @@ async def analyze(file: UploadFile = File(...)):
         style_data["saturation"]
     )
 
+    accessibility = analyze_accessibility(
+    style_data["brightness"],
+    style_data["saturation"]
+    )   
+
     return {
         "filename": file.filename,
         **palette_data,
