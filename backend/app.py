@@ -76,5 +76,6 @@ async def analyze(file: UploadFile = File(...)):
         "content_type": content_type,
         "mood": mood,
         "layout": layout_data,
+        "accessibility": accessibility,
         "design_score": design_score
     }
