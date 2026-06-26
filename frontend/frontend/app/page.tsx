@@ -23,6 +23,11 @@ interface AnalysisResult {
     layout: string;
   };
 
+  accessibility: {
+    score: number;
+    suggestions: string[];
+  };
+
   style: {
     style: string;
     keywords: string[];
