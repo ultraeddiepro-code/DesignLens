@@ -8,3 +8,10 @@ def analyze_accessibility(brightness, saturation):
             "Increase brightness for better readability."
         )
 
+    if brightness > 230:
+        score -= 15
+        suggestions.append(
+            "Reduce brightness to improve contrast."
+        )
+
+    
