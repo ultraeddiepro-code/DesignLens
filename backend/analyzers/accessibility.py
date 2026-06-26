@@ -14,4 +14,10 @@ def analyze_accessibility(brightness, saturation):
             "Reduce brightness to improve contrast."
         )
 
+    if saturation > 120:
+        score -= 10
+        suggestions.append(
+            "Very saturated colors can reduce readability."
+        )
+
     
