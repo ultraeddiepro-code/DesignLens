@@ -20,4 +20,12 @@ def analyze_accessibility(brightness, saturation):
             "Very saturated colors can reduce readability."
         )
 
-    
+    if not suggestions:
+        suggestions.append(
+            "Palette appears balanced for general use."
+        )
+
+    return {
+        "score": max(0, score),
+        "suggestions": suggestions
+    }
