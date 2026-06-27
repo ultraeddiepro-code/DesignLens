@@ -77,7 +77,9 @@ export default function Home() {
           }}
         />
 
-        
+        <PreviewSection
+           previewUrl={previewUrl}
+        />
 
         {result && (
           <>
