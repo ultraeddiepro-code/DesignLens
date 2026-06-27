@@ -1,41 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
-interface PaletteColor {
-  hex: string;
-  rgb: number[];
-  name: string;
-}
-
-interface AnalysisResult {
-  filename: string;
-
-  palette: PaletteColor[];
-
-  content_type: string;
-
-  mood: string;
-
-  design_score: number;
-
-  layout: {
-    layout: string;
-  };
-
-  accessibility: {
-    score: number;
-    suggestions: string[];
-  };
-
-  style: {
-    style: string;
-    keywords: string[];
-    brightness: number;
-    saturation: number;
-    summary: string;
-  };
-}
+import { AnalysisResult } from "../types/analysis";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
