@@ -1,0 +1,34 @@
+export interface PaletteColor {
+  hex: string;
+  rgb: number[];
+  name: string;
+}
+
+export interface AnalysisResult {
+  filename: string;
+
+  palette: PaletteColor[];
+
+  content_type: string;
+
+  mood: string;
+
+  design_score: number;
+
+  layout: {
+    layout: string;
+  };
+
+  accessibility: {
+    score: number;
+    suggestions: string[];
+  };
+
+  style: {
+    style: string;
+    keywords: string[];
+    brightness: number;
+    saturation: number;
+    summary: string;
+  };
+}
