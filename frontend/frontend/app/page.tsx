@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnalysisResult } from "../types/analysis";
 import UploadSection from "../components/UploadSection";
+import PreviewSection from "../components/PreviewSection";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
