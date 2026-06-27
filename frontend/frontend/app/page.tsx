@@ -59,34 +59,22 @@ export default function Home() {
           Upload an image and extract design insights.
         </p>
 
-        <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-6 mb-8">
-          <input
-            type="file"
-            accept="image/*"
-            onChange={(e) => {
-              const selectedFile =
-                e.target.files?.[0] || null;
+        <UploadSection
+          loading={loading}
+          onAnalyze={analyzeImage}
+          onFileChange={(e) => {
+            const selectedFile =
+              e.target.files?.[0] || null;
 
-              setFile(selectedFile);
+            setFile(selectedFile);
 
-              if (selectedFile) {
-                setPreviewUrl(
-                  URL.createObjectURL(selectedFile)
-                );
-              }
-            }}
-          />
-
-          <button
-            onClick={analyzeImage}
-            disabled={loading}
-            className="mt-4 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 disabled:opacity-50"
-          >
-            {loading
-              ? "Analyzing..."
-              : "Analyze Image"}
-          </button>
-        </div>
+            if (selectedFile) {
+              setPreviewUrl(
+                URL.createObjectURL(selectedFile)
+              );
+            }
+          }}
+        />
 
         {previewUrl && (
           <div className="mb-8">
