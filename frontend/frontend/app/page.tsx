@@ -94,9 +94,7 @@ export default function Home() {
              <SummarySection result={result} />
             
             <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-4">
-                Accessibility
-              </h2>
+              <AccessibilitySection result={result} />
 
             <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-6">
 
