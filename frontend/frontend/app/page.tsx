@@ -5,6 +5,7 @@ import { AnalysisResult } from "../types/analysis";
 import UploadSection from "../components/UploadSection";
 import PreviewSection from "../components/PreviewSection";
 import AnalysisSection from "../components/AnalysisSection";
+import SummarySection from "../components/SummarySection";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
@@ -88,6 +89,8 @@ export default function Home() {
             <AnalysisSection
               result={result}
             />
+
+            
             
             <div className="mb-8">
               <h2 className="text-2xl font-bold mb-4">
