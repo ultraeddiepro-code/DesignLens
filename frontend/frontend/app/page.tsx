@@ -6,6 +6,7 @@ import UploadSection from "../components/UploadSection";
 import PreviewSection from "../components/PreviewSection";
 import AnalysisSection from "../components/AnalysisSection";
 import SummarySection from "../components/SummarySection";
+import AccessibilitySection from "../components/AccessibilitySection";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
@@ -89,7 +90,7 @@ export default function Home() {
             <AnalysisSection
               result={result}
             />
-            
+
              <SummarySection result={result} />
             
             <div className="mb-8">
