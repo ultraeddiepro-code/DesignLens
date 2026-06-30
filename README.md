@@ -135,3 +135,24 @@ Based on
 • Overall balance
 
 ───
+
+♿ Accessibility Analysis
+
+Evaluates readability.
+
+Provides
+
+• Accessibility score
+• Improvement suggestions
+
+Example
+
+Accessibility Score
+95 / 100
+
+Suggestions
+
+• Palette appears balanced.
+• Increase contrast for small text.
+
+───
