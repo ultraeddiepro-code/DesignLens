@@ -10,3 +10,18 @@
 "License" (https://img.shields.io/badge/License-MIT-green)
 
 ───
+
+📖 Overview
+
+DesignLens is a full-stack web application that analyzes uploaded images and generates design-focused insights.
+
+Instead of simply displaying an image, DesignLens examines its visual characteristics to provide information about:
+
+• 🎨 Color palette
+• 🧠 Design style
+• 🌈 Mood
+• 📐 Layout
+• 📄 Content type
+• ♿ Accessibility
+• ⭐ Design quality score
+• 📝 AI-style design summary
