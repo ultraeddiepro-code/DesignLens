@@ -177,3 +177,32 @@ Backend
 • Scikit-learn
 
 ───
+
+📂 Project Structure
+
+DesignLens
+│
+├── backend
+│ ├── analyzers
+│ │ ├── accessibility.py
+│ │ ├── color_names.py
+│ │ ├── colors.py
+│ │ ├── content.py
+│ │ ├── layout.py
+│ │ ├── mood.py
+│ │ ├── scoring.py
+│ │ └── style.py
+│ │
+│ ├── uploads
+│ └── app.py
+│
+├── frontend
+│ ├── app
+│ ├── components
+│ ├── types
+│ ├── public
+│ └── package.json
+│
+└── README.md
+
+───
