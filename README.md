@@ -29,3 +29,13 @@ Instead of simply displaying an image, DesignLens examines its visual characteri
 The goal is to help designers, developers, marketers, and content creators understand and evaluate visual designs more efficiently.
 
 ───
+
+✨ Features
+
+📤 Image Upload
+
+• Upload PNG, JPG, JPEG, or WebP images
+• Instant preview
+• Fast processing pipeline
+
+───
