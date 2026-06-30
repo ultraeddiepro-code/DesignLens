@@ -58,3 +58,14 @@ White
 RGB(255,255,255)
 
 ───
+
+🧠 Style Detection
+
+Automatically classifies the uploaded image into styles such as:
+
+• Minimalist
+• Vibrant
+• Dark / Moody
+• Balanced Design
+
+───
