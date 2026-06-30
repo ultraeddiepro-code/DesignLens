@@ -69,3 +69,13 @@ Automatically classifies the uploaded image into styles such as:
 • Balanced Design
 
 ───
+
+📝 Design Summary
+
+Generates a readable summary describing the overall design characteristics.
+
+Example
+
+«This image uses a minimalist design style with high brightness, low saturation, and a clean neutral palette.»
+
+───
