@@ -94,3 +94,16 @@ Examples
 • Neutral
 
 ───
+
+📄 Content Type Detection
+
+Classifies the uploaded image.
+
+Current supported types
+
+• Poster
+• Banner
+• Landscape Design
+• Square Design
+
+───
