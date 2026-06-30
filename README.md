@@ -79,3 +79,18 @@ Example
 «This image uses a minimalist design style with high brightness, low saturation, and a clean neutral palette.»
 
 ───
+
+🌈 Mood Detection
+
+Predicts the overall emotional feel.
+
+Examples
+
+• Professional
+• Elegant
+• Minimal
+• Dark & Dramatic
+• Energetic
+• Neutral
+
+───
