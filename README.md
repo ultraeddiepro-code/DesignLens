@@ -156,3 +156,14 @@ Suggestions
 • Increase contrast for small text.
 
 ───
+
+🏗 Tech Stack
+
+Frontend
+
+• Next.js 16
+• React 19
+• TypeScript
+• Tailwind CSS
+
+───
