@@ -119,3 +119,19 @@ Examples
 • Balanced Layout
 
 ───
+
+⭐ Design Score
+
+Calculates an overall design quality score.
+
+Range
+
+0 — 100
+
+Based on
+
+• Brightness
+• Saturation
+• Overall balance
+
+───
