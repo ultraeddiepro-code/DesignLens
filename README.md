@@ -25,3 +25,7 @@ Instead of simply displaying an image, DesignLens examines its visual characteri
 • ♿ Accessibility
 • ⭐ Design quality score
 • 📝 AI-style design summary
+
+The goal is to help designers, developers, marketers, and content creators understand and evaluate visual designs more efficiently.
+
+───
