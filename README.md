@@ -39,3 +39,22 @@ The goal is to help designers, developers, marketers, and content creators under
 • Fast processing pipeline
 
 ───
+
+🎨 Color Analysis
+
+Extracts dominant colors using K-Means clustering.
+
+Displays:
+
+• Color swatches
+• HEX values
+• RGB values
+• Approximate color names
+
+Example
+
+White
+#FFFFFF
+RGB(255,255,255)
+
+───
