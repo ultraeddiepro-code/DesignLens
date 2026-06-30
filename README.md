@@ -167,3 +167,13 @@ Frontend
 • Tailwind CSS
 
 ───
+
+Backend
+
+• FastAPI
+• Python
+• Pillow
+• NumPy
+• Scikit-learn
+
+───
