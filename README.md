@@ -107,3 +107,15 @@ Current supported types
 • Square Design
 
 ───
+
+📐 Layout Detection
+
+Detects the approximate composition.
+
+Examples
+
+• Vertical Poster
+• Horizontal Banner
+• Balanced Layout
+
+───
