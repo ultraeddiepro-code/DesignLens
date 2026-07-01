@@ -19,4 +19,27 @@ export default function PaletteSection({
             key={index}
             className="bg-zinc-900 border border-zinc-700 rounded-xl p-4 w-40"
           >
-    
+            <div
+              className="w-full h-24 rounded-lg border"
+              style={{
+                backgroundColor: color.hex,
+              }}
+            />
+
+            <p className="mt-3 font-mono text-sm">
+              {color.hex}
+            </p>
+
+            <p className="text-blue-400 text-sm">
+              {color.name}
+            </p>
+
+            <p className="text-gray-400 text-xs">
+              RGB({color.rgb.join(", ")})
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
