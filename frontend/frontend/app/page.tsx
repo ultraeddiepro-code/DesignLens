@@ -7,6 +7,8 @@ import PreviewSection from "../components/PreviewSection";
 import AnalysisSection from "../components/AnalysisSection";
 import SummarySection from "../components/SummarySection";
 import AccessibilitySection from "../components/AccessibilitySection";
+import PaletteSection from "../components/PaletteSection";
+
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
