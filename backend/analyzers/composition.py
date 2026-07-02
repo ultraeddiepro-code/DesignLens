@@ -77,4 +77,13 @@ def analyze_composition(image_path):
             "Composition appears balanced."
         )
 
-   
+    return {
+        "symmetry": symmetry,
+        "balance": round(balance, 1),
+        "rule_of_thirds": rule_of_thirds,
+        "focus_point": {
+            "x": round(center_x, 2),
+            "y": round(center_y, 2),
+        },
+        "suggestions": suggestions,
+    }
