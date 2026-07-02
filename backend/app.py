@@ -8,6 +8,7 @@ from analyzers.mood import detect_mood
 from analyzers.layout import analyze_layout
 from analyzers.scoring import calculate_design_score
 from analyzers.accessibility import analyze_accessibility
+from analyzers.composition import analyze_composition
 
 import os
 
@@ -77,5 +78,6 @@ async def analyze(file: UploadFile = File(...)):
         "mood": mood,
         "layout": layout_data,
         "accessibility": accessibility,
+        
         "design_score": design_score
     }
