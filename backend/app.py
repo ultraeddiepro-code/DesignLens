@@ -78,6 +78,6 @@ async def analyze(file: UploadFile = File(...)):
         "mood": mood,
         "layout": layout_data,
         "accessibility": accessibility,
-        
+        "composition": composition,
         "design_score": design_score
     }
