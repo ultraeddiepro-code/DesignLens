@@ -31,4 +31,14 @@ export interface AnalysisResult {
     saturation: number;
     summary: string;
   };
+    composition: {
+    symmetry: number;
+    balance: number;
+    rule_of_thirds: boolean;
+    focus_point: {
+      x: number;
+      y: number;
+    };
+    suggestions: string[];
+  };
 }
