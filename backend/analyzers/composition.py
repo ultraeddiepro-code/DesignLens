@@ -57,4 +57,24 @@ def analyze_composition(image_path):
 
     suggestions = []
 
+    if symmetry < 70:
+        suggestions.append(
+            "Improve visual symmetry."
+        )
+
+    if balance < 80:
+        suggestions.append(
+            "Balance the composition."
+        )
+
+    if not rule_of_thirds:
+        suggestions.append(
+            "Consider aligning the subject closer to a rule-of-thirds intersection."
+        )
+
+    if not suggestions:
+        suggestions.append(
+            "Composition appears balanced."
+        )
+
    
