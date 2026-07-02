@@ -38,4 +38,23 @@ def analyze_composition(image_path):
         - np.abs(pixels - flipped).mean() / 255 * 100
     )
 
+    symmetry = round(symmetry, 1)
+
+    # Rule of thirds
+
+    thirds_x = [1 / 3, 2 / 3]
+    thirds_y = [1 / 3, 2 / 3]
+
+    threshold = 0.08
+
+    rule_of_thirds = any(
+        abs(center_x - x) < threshold
+        for x in thirds_x
+    ) and any(
+        abs(center_y - y) < threshold
+        for y in thirds_y
+    )
+
+    suggestions = []
+
    
