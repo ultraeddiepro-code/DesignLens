@@ -24,6 +24,12 @@ export interface AnalysisResult {
     suggestions: string[];
   };
 
+  harmony: {
+  scheme: string;
+  score: number;
+  description: string;
+  };
+
   style: {
     style: string;
     keywords: string[];
