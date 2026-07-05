@@ -64,7 +64,9 @@ async def analyze(file: UploadFile = File(...)):
 
     composition = analyze_composition(filepath)
 
-    
+    harmony = analyze_harmony(
+    palette_data["palette"]
+    )
 
     # Calculate design score
     design_score = calculate_design_score(
