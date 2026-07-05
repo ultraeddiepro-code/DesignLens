@@ -48,6 +48,8 @@ async def analyze(file: UploadFile = File(...)):
     # Analyze style
     style_data = analyze_style(filepath)
 
+    palette_data = extract_palette(filepath)
+
     # Detect mood
     mood = detect_mood(
         style_data["brightness"],
