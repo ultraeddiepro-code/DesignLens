@@ -9,6 +9,7 @@ import SummarySection from "../components/SummarySection";
 import AccessibilitySection from "../components/AccessibilitySection";
 import PaletteSection from "../components/PaletteSection";
 import KeywordsSection from "../components/KeywordsSection";
+import HarmonySection from "../components/HarmonySection";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
