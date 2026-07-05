@@ -64,6 +64,8 @@ async def analyze(file: UploadFile = File(...)):
 
     composition = analyze_composition(filepath)
 
+    
+
     # Calculate design score
     design_score = calculate_design_score(
         style_data["brightness"],
