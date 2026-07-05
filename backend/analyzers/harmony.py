@@ -45,4 +45,12 @@ def analyze_harmony(palette):
         scheme = "Complementary"
         score = 92
 
-   
+    else:
+        scheme = "Mixed"
+        score = 75
+
+    return {
+        "scheme": scheme,
+        "score": score,
+        "description": f"The palette follows a {scheme.lower()} harmony."
+    }
