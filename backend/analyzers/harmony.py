@@ -22,3 +22,15 @@ def analyze_harmony(palette):
 
     diffs = []
 
+    for i in range(len(hues) - 1):
+        diff = abs(hues[i] - hues[i + 1])
+        diff = min(diff, 360 - diff)
+        diffs.append(diff)
+
+    avg_diff = sum(diffs) / len(diffs)
+
+    if avg_diff < 25:
+        scheme = "Monochromatic"
+        score = 95
+
+ 
