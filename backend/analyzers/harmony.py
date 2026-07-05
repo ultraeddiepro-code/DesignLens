@@ -33,4 +33,16 @@ def analyze_harmony(palette):
         scheme = "Monochromatic"
         score = 95
 
- 
+    elif avg_diff < 60:
+        scheme = "Analogous"
+        score = 90
+
+    elif avg_diff < 120:
+        scheme = "Triadic"
+        score = 85
+
+    elif avg_diff < 190:
+        scheme = "Complementary"
+        score = 92
+
+   
