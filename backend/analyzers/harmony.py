@@ -20,4 +20,5 @@ def analyze_harmony(palette):
         for color in palette
     ]
 
-    
+    diffs = []
+
