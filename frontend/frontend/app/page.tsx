@@ -88,14 +88,18 @@ export default function Home() {
         />
 
         {result && (
-          <>
-            
-            <AnalysisSection
-              result={result}
-            />
+  <>
+            <AnalysisSection result={result} />
 
-             <SummarySection result={result} />
+            <SummarySection result={result} />
 
+            <HarmonySection result={result} />
+
+            <KeywordsSection result={result} />
+
+            <AccessibilitySection result={result} />
+
+            <PaletteSection result={result} />
           </>
         )}
 
