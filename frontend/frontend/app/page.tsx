@@ -11,6 +11,7 @@ import PaletteSection from "../components/PaletteSection";
 import KeywordsSection from "../components/KeywordsSection";
 import HarmonySection from "../components/HarmonySection";
 import CompositionSection from "../components/CompositionSection";
+import { analyzeImage as analyzeApi } from "../lib/api";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
