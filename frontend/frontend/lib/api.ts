@@ -4,3 +4,14 @@ export async function analyzeImage(file: File) {
   const formData = new FormData();
   formData.append("file", file);
 
+  const response = await fetch(`${API_URL}/analyze`, {
+    method: "POST",
+    body: formData,
+  });
+
+  if (!response.ok) {
+    throw new Error("Analysis failed");
+  }
+
+  return response.json();
+}
