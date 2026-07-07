@@ -19,15 +19,34 @@ export interface AnalysisResult {
     layout: string;
   };
 
-  accessibility: {
+  harmony: {
+    scheme: string;
+    score: number;
+    description: string;
+  };
+
+  composition: {
+    symmetry: number;
+    balance: number;
+    rule_of_thirds: boolean;
+    focus_point: {
+      x: number;
+      y: number;
+    };
+    suggestions: string[];
+  };
+
+  hierarchy: {
+    primary_focus: string;
+    secondary_focus: string;
+    reading_order: string[];
     score: number;
     suggestions: string[];
   };
 
-  harmony: {
-  scheme: string;
-  score: number;
-  description: string;
+  accessibility: {
+    score: number;
+    suggestions: string[];
   };
 
   style: {
@@ -36,23 +55,5 @@ export interface AnalysisResult {
     brightness: number;
     saturation: number;
     summary: string;
-  };
-    composition: {
-    symmetry: number;
-    balance: number;
-    rule_of_thirds: boolean;
-    focus_point: {
-      x: number;
-      y: number;
-    };
-
-    hierarchy: {
-      primary_focus: string;
-      secondary_focus: string;
-      reading_order: string[];
-      score: number;
-      suggestions: string[];
-    };
-    suggestions: string[];
   };
 }
