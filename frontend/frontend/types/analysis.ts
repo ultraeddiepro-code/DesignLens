@@ -19,10 +19,23 @@ export interface AnalysisResult {
     layout: string;
   };
 
+  accessibility: {
+    score: number;
+    suggestions: string[];
+  };
+
   harmony: {
     scheme: string;
     score: number;
     description: string;
+  };
+
+  style: {
+    style: string;
+    keywords: string[];
+    brightness: number;
+    saturation: number;
+    summary: string;
   };
 
   composition: {
@@ -42,18 +55,5 @@ export interface AnalysisResult {
     reading_order: string[];
     score: number;
     suggestions: string[];
-  };
-
-  accessibility: {
-    score: number;
-    suggestions: string[];
-  };
-
-  style: {
-    style: string;
-    keywords: string[];
-    brightness: number;
-    saturation: number;
-    summary: string;
   };
 }
