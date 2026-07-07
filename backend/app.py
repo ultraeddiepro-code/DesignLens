@@ -51,6 +51,8 @@ async def analyze(file: UploadFile = File(...)):
 
     palette_data = extract_palette(filepath)
 
+    hierarchy = analyze_hierarchy(filepath)
+
     # Detect mood
     mood = detect_mood(
         style_data["brightness"],
