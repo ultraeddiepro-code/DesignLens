@@ -10,6 +10,7 @@ from analyzers.scoring import calculate_design_score
 from analyzers.accessibility import analyze_accessibility
 from analyzers.composition import analyze_composition
 from analyzers.harmony import analyze_harmony
+from analyzers.hierarchy import analyze_hierarchy
 
 import os
 
