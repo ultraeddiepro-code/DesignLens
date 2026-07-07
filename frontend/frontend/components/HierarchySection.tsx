@@ -44,3 +44,22 @@ export default function HierarchySection({ result }: Props) {
             )
           )}
         </div>
+
+        <h3 className="font-semibold mt-5 mb-2">
+          Suggestions
+        </h3>
+
+        <ul className="list-disc list-inside">
+          {result.hierarchy.suggestions.map(
+            (item, index) => (
+              <li key={index}>
+                {item}
+              </li>
+            )
+          )}
+        </ul>
+
+      </div>
+    </div>
+  );
+}
