@@ -92,5 +92,6 @@ async def analyze(file: UploadFile = File(...)):
         "accessibility": accessibility,
         "composition": composition,
         "design_score": design_score,
+        "hierarchy": hierarchy,
         "harmony": harmony
     }
