@@ -45,6 +45,14 @@ export interface AnalysisResult {
       x: number;
       y: number;
     };
+
+    hierarchy: {
+      primary_focus: string;
+      secondary_focus: string;
+      reading_order: string[];
+      score: number;
+      suggestions: string[];
+    };
     suggestions: string[];
   };
 }
