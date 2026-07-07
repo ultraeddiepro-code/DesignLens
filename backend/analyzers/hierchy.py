@@ -6,4 +6,10 @@ def analyze_hierarchy(image_path):
             "Top",
             "Center",
             "Bottom"
-  
+        ],
+        "score": 88,
+        "suggestions": [
+            "Increase contrast around the primary subject.",
+            "Improve spacing between major elements."
+        ]
+    }
