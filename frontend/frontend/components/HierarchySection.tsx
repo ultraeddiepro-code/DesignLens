@@ -22,3 +22,25 @@ export default function HierarchySection({ result }: Props) {
           <strong>Primary Focus:</strong>{" "}
           {result.hierarchy.primary_focus}
         </p>
+
+        <p>
+          <strong>Secondary Focus:</strong>{" "}
+          {result.hierarchy.secondary_focus}
+        </p>
+
+        <p className="mt-3">
+          <strong>Reading Order:</strong>
+        </p>
+
+        <div className="flex gap-2 flex-wrap mt-2">
+          {result.hierarchy.reading_order.map(
+            (step, index) => (
+              <span
+                key={index}
+                className="bg-zinc-800 px-3 py-2 rounded-lg"
+              >
+                {step}
+              </span>
+            )
+          )}
+        </div>
