@@ -97,6 +97,8 @@ export default function Home() {
             <SummarySection result={result} />
           
             <CompositionSection result={result} />
+            
+            <HierarchySection result={result} />
 
             <HarmonySection result={result} />
 
