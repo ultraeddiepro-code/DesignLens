@@ -82,6 +82,8 @@ async def analyze(file: UploadFile = File(...)):
     style_data["saturation"]
     )   
 
+    hierarchy_data = analyze_hierarchy(filepath)
+
     return {
         "filename": file.filename,
         **palette_data,
@@ -89,9 +91,9 @@ async def analyze(file: UploadFile = File(...)):
         "content_type": content_type,
         "mood": mood,
         "layout": layout_data,
-        "accessibility": accessibility,
-        "composition": composition,
         "design_score": design_score,
-        "hierarchy": hierarchy,
-        "harmony": harmony
+        "accessibility": accessibility_data,
+        "composition": composition_data,
+        "harmony": harmony_data,
+        "hierarchy": hierarchy_data,
     }
