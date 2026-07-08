@@ -56,4 +56,10 @@ export interface AnalysisResult {
     score: number;
     suggestions: string[];
   };
+
+  typography: {
+    text_density: number;
+    readability: string;
+    suggestion: string;
+  };
 }
