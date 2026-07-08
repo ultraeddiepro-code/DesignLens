@@ -51,7 +51,8 @@ async def analyze(file: UploadFile = File(...)):
 
     accessibility_data = analyze_accessibility(filepath)
 
-    
+    composition_data = analyze_composition(filepath)
+
     palette_data = extract_palette(filepath)
 
     hierarchy = analyze_hierarchy(filepath)
