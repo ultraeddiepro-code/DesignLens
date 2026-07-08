@@ -1,5 +1,6 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
+
 from analyzers.colors import extract_palette
 from analyzers.style import analyze_style
 from analyzers.content import detect_content_type
@@ -42,52 +43,52 @@ async def analyze(file: UploadFile = File(...)):
     with open(filepath, "wb") as f:
         f.write(await file.read())
 
-    # Extract palette
+    # -------------------------------
+    # Core Analysis
+    # -------------------------------
+
     palette_data = extract_palette(filepath)
 
-    # Analyze style
     style_data = analyze_style(filepath)
 
-    accessibility_data = analyze_accessibility(filepath)
+    content_type = detect_content_type(filepath)
 
-    composition_data = analyze_composition(filepath)
-
-    harmony_data = analyze_harmony(filepath)
-
-    palette_data = extract_palette(filepath)
-
-    hierarchy = analyze_hierarchy(filepath)
-
-    # Detect mood
     mood = detect_mood(
         style_data["brightness"],
         style_data["saturation"]
     )
 
-    # Detect content type
-    content_type = detect_content_type(filepath)
-
-    # Analyze layout
     layout_data = analyze_layout(filepath)
 
-    composition = analyze_composition(filepath)
+    # -------------------------------
+    # Advanced Analysis
+    # -------------------------------
 
-    harmony = analyze_harmony(
-    palette_data["palette"]
+    accessibility_data = analyze_accessibility(
+        style_data["brightness"],
+        style_data["saturation"]
     )
 
-    # Calculate design score
+    composition_data = analyze_composition(filepath)
+
+    harmony_data = analyze_harmony(
+        palette_data["palette"]
+    )
+
+    hierarchy_data = analyze_hierarchy(filepath)
+
+    # -------------------------------
+    # Overall Score
+    # -------------------------------
+
     design_score = calculate_design_score(
         style_data["brightness"],
         style_data["saturation"]
     )
 
-    accessibility = analyze_accessibility(
-    style_data["brightness"],
-    style_data["saturation"]
-    )   
-
-    hierarchy_data = analyze_hierarchy(filepath)
+    # -------------------------------
+    # API Response
+    # -------------------------------
 
     return {
         "filename": file.filename,
