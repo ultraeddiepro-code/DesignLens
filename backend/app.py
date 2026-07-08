@@ -53,6 +53,8 @@ async def analyze(file: UploadFile = File(...)):
 
     composition_data = analyze_composition(filepath)
 
+    harmony_data = analyze_harmony(filepath)
+
     palette_data = extract_palette(filepath)
 
     hierarchy = analyze_hierarchy(filepath)
