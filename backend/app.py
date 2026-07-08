@@ -49,6 +49,8 @@ async def analyze(file: UploadFile = File(...)):
 
     palette_data = extract_palette(filepath)
 
+    typography_data = analyze_typography(filepath)
+
     style_data = analyze_style(filepath)
 
     content_type = detect_content_type(filepath)
@@ -102,4 +104,5 @@ async def analyze(file: UploadFile = File(...)):
         "composition": composition_data,
         "harmony": harmony_data,
         "hierarchy": hierarchy_data,
+        "typography": typography_data,
     }
