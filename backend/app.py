@@ -1,6 +1,5 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
-
 from analyzers.colors import extract_palette
 from analyzers.style import analyze_style
 from analyzers.content import detect_content_type
