@@ -15,3 +15,25 @@ def analyze_typography(image_path):
         dark_pixels / total_pixels * 100,
         2
     )
+
+    if text_density < 8:
+        readability = "Excellent"
+        suggestion = "Typography is spacious and easy to scan."
+
+    elif text_density < 15:
+        readability = "Good"
+        suggestion = "Text density appears balanced."
+
+    elif text_density < 25:
+        readability = "Average"
+        suggestion = "Consider increasing spacing."
+
+    else:
+        readability = "Crowded"
+        suggestion = "Reduce text amount or increase whitespace."
+
+    return {
+        "text_density": text_density,
+        "readability": readability,
+        "suggestion": suggestion
+    }
