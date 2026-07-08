@@ -10,6 +10,7 @@ from analyzers.accessibility import analyze_accessibility
 from analyzers.composition import analyze_composition
 from analyzers.harmony import analyze_harmony
 from analyzers.hierarchy import analyze_hierarchy
+from analyzers.typography import analyze_typography
 
 import os
 
