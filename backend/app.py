@@ -11,6 +11,7 @@ from analyzers.composition import analyze_composition
 from analyzers.harmony import analyze_harmony
 from analyzers.hierarchy import analyze_hierarchy
 from analyzers.typography import analyze_typography
+from analyzers.contrast import analyze_contrast
 
 import os
 
