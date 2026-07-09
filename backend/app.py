@@ -94,7 +94,7 @@ async def analyze(file: UploadFile = File(...)):
     contrast_data = analyze_contrast(
     palette_data["palette"]
     )
-    
+
     # -------------------------------
     # API Response
     # -------------------------------
@@ -112,4 +112,5 @@ async def analyze(file: UploadFile = File(...)):
         "harmony": harmony_data,
         "hierarchy": hierarchy_data,
         "typography": typography_data,
+        "contrast": contrast_data,
     }
