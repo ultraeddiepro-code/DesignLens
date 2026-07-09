@@ -30,3 +30,40 @@ def contrast_ratio(c1, c2):
         (darker + 0.05),
         2
     )
+
+
+def analyze_contrast(palette):
+
+    if len(palette) < 2:
+        return {
+            "ratio": 1,
+            "rating": "Unknown",
+            "wcag": "Unknown"
+        }
+
+    ratio = contrast_ratio(
+        palette[0]["rgb"],
+        palette[1]["rgb"]
+    )
+
+    if ratio >= 7:
+        rating = "Excellent"
+        wcag = "AAA"
+
+    elif ratio >= 4.5:
+        rating = "Good"
+        wcag = "AA"
+
+    elif ratio >= 3:
+        rating = "Acceptable"
+        wcag = "Large Text Only"
+
+    else:
+        rating = "Poor"
+        wcag = "Fail"
+
+    return {
+        "ratio": ratio,
+        "rating": rating,
+        "wcag": wcag
+    }
