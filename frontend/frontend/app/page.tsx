@@ -108,6 +108,8 @@ export default function Home() {
             <AccessibilitySection result={result} />
 
             <PaletteSection result={result} />
+            
+            <TypographySection result={result} />
           </>
         )}
 
