@@ -91,6 +91,10 @@ async def analyze(file: UploadFile = File(...)):
         style_data["saturation"]
     )
 
+    contrast_data = analyze_contrast(
+    palette_data["palette"]
+    )
+    
     # -------------------------------
     # API Response
     # -------------------------------
