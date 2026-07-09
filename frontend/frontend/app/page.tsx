@@ -14,6 +14,7 @@ import CompositionSection from "../components/CompositionSection";
 import { analyzeImage as analyzeApi } from "../lib/api";
 import HierarchySection from "../components/HierarchySection";
 import TypographySection from "../components/TypographySection";
+import ContrastSection from "../components/ContrastSection";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
@@ -108,7 +109,7 @@ export default function Home() {
             <AccessibilitySection result={result} />
 
             <PaletteSection result={result} />
-            
+
             <TypographySection result={result} />
           </>
         )}
