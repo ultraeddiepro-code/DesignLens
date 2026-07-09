@@ -111,6 +111,9 @@ export default function Home() {
             <PaletteSection result={result} />
 
             <TypographySection result={result} />
+
+            <ContrastSection result={result} />
+            
           </>
         )}
 
