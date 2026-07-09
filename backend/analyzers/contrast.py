@@ -18,3 +18,15 @@ def luminance(rgb):
     )
 
 
+def contrast_ratio(c1, c2):
+    l1 = luminance(c1)
+    l2 = luminance(c2)
+
+    lighter = max(l1, l2)
+    darker = min(l1, l2)
+
+    return round(
+        (lighter + 0.05) /
+        (darker + 0.05),
+        2
+    )
