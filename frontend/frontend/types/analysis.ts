@@ -62,4 +62,10 @@ export interface AnalysisResult {
     readability: string;
     suggestion: string;
   };
+
+  contrast: {
+  ratio: number;
+  rating: string;
+  wcag: string;
+  };
 }
