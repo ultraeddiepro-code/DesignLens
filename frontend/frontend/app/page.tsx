@@ -121,6 +121,17 @@ export default function Home() {
 
             <CompositionSection result={result} />
 
+            <HierarchySection result={result} />
+
+            <TypographySection result={result} />
+
+            <HarmonySection result={result} />
+
+            <ContrastSection result={result} />
+
+            <AccessibilitySection result={result} />
+
+            <PaletteSection result={result} />
             
           </>
         )}
