@@ -124,4 +124,5 @@ async def analyze(file: UploadFile = File(...)):
         "hierarchy": hierarchy_data,
         "typography": typography_data,
         "contrast": contrast_data,
+        "critique": critique,
     }
