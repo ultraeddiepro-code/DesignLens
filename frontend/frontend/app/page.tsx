@@ -114,6 +114,13 @@ export default function Home() {
             <TypographySection result={result} />
 
             <ContrastSection result={result} />
+
+            <SummarySection result={result} />
+
+            <CritiqueSection result={result} />
+
+            <CompositionSection result={result} />
+
             
           </>
         )}
