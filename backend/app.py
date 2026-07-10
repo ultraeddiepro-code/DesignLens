@@ -12,6 +12,7 @@ from analyzers.harmony import analyze_harmony
 from analyzers.hierarchy import analyze_hierarchy
 from analyzers.typography import analyze_typography
 from analyzers.contrast import analyze_contrast
+from analyzers.critique import generate_critique
 
 import os
 
