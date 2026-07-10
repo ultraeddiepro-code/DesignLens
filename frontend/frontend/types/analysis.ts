@@ -68,4 +68,11 @@ export interface AnalysisResult {
   rating: string;
   wcag: string;
   };
+  
+  critique: {
+    summary: string;
+    strengths: string[];
+    weaknesses: string[];
+    suggestions: string[];
+  };
 }
