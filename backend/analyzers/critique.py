@@ -41,3 +41,18 @@ def generate_critique(
         weaknesses.append(
             "Accessibility could be improved."
         )
+
+    if typography["readability"] == "Crowded":
+        weaknesses.append(
+            "Typography feels crowded."
+        )
+
+        suggestions.append(
+            "Increase spacing between text elements."
+        )
+
+    if composition["balance"] < 80:
+        suggestions.append(
+            "Improve visual balance."
+        )
+
