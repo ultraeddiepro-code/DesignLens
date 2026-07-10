@@ -56,3 +56,16 @@ def generate_critique(
             "Improve visual balance."
         )
 
+    summary = (
+        f"This design has a {style.lower()} style "
+        f"with a {mood.lower()} mood. "
+        f"The overall design score is "
+        f"{design_score}/100."
+    )
+
+    return {
+        "summary": summary,
+        "strengths": strengths,
+        "weaknesses": weaknesses,
+        "suggestions": suggestions,
+    }
