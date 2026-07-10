@@ -92,6 +92,16 @@ async def analyze(file: UploadFile = File(...)):
         style_data["saturation"]
     )
 
+    critique = generate_critique(
+    style_data["style"],
+    mood,
+    harmony_data,
+    accessibility_data,
+    design_score,
+    typography_data,
+    composition_data,
+    )
+
     contrast_data = analyze_contrast(
     palette_data["palette"]
     )
