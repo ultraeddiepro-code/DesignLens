@@ -33,3 +33,24 @@ export default function CritiqueSection({
         <h3 className="font-semibold text-red-400 mb-2">
           Weaknesses
         </h3>
+
+        <ul className="list-disc list-inside mb-6">
+          {result.critique.weaknesses.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+
+        <h3 className="font-semibold text-blue-400 mb-2">
+          Suggestions
+        </h3>
+
+        <ul className="list-disc list-inside">
+          {result.critique.suggestions.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+
+      </div>
+    </div>
+  );
+}
