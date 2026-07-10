@@ -32,3 +32,12 @@ def generate_critique(
         suggestions.append(
             "Experiment with a more cohesive color palette."
         )
+
+    if accessibility["score"] >= 90:
+        strengths.append(
+            "Good accessibility and readability."
+        )
+    else:
+        weaknesses.append(
+            "Accessibility could be improved."
+        )
