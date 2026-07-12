@@ -121,8 +121,6 @@ export default function Home() {
 
             <CritiqueSection result={result} />
 
-            <CompositionSection result={result} />
-
             <HierarchySection result={result} />
 
             <TypographySection result={result} />
