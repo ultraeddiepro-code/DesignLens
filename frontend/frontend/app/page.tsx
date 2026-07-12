@@ -120,8 +120,6 @@ export default function Home() {
             <ContrastSection result={result} />
 
             <CritiqueSection result={result} />            
-
-            <PaletteSection result={result} />
             
           </>
         )}
