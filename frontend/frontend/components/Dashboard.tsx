@@ -9,7 +9,7 @@ export default function Dashboard({
   result,
 }: Props) {
   return (
-    <div className="grid md:grid-cols-4 gap-4 mb-8">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
 
       <StatCard
         title="Design Score"
