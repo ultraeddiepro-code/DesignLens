@@ -16,4 +16,24 @@ export default function Dashboard({
         value={`${result.design_score}/100`}
       />
 
-    
+      <StatCard
+        title="Style"
+        value={result.style.style}
+      />
+
+      <StatCard
+        title="Mood"
+        value={result.mood}
+      />
+
+      <StatCard
+        title="Content"
+        value={result.content_type}
+      />
+
+      <StatCard
+        title="Layout"
+        value={result.layout.layout}
+      />
+
+  
