@@ -64,14 +64,17 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white p-8">
       <div className="max-w-7xl mx-auto">
+        <div className="mb-10 text-center">
 
-        <h1 className="text-5xl font-bold mb-2">
-          DesignLens
-        </h1>
+          <h1 className="text-6xl font-extrabold bg-linear-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+            DesignLens
+          </h1>
 
-        <p className="text-gray-400 mb-8">
-          Upload an image and extract design insights.
-        </p>
+          <p className="text-gray-400 mt-4 text-lg">
+            AI-powered visual design analysis platform
+          </p>
+
+        </div>
 
         <UploadSection
           loading={loading}
