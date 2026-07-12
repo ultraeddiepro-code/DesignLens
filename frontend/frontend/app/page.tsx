@@ -119,8 +119,6 @@ export default function Home() {
 
             <ContrastSection result={result} />
 
-            <SummarySection result={result} />
-
             <CritiqueSection result={result} />
 
             <CompositionSection result={result} />
