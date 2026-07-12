@@ -121,8 +121,6 @@ export default function Home() {
 
             <CritiqueSection result={result} />
 
-            <TypographySection result={result} />
-
             <HarmonySection result={result} />
 
             <ContrastSection result={result} />
