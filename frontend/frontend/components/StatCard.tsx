@@ -16,8 +16,7 @@ export default function StatCard({
         {title}
       </p>
 
-      <p className={`text-2xl font-bold mt-2 ${color}`}>
-        {value}
+      <p className={`text-3xl font-bold mt-3 ${color}`}>
       </p>
 
     </div>
