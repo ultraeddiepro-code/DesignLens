@@ -96,7 +96,7 @@ export default function Home() {
 
         {result && (
   <>
-            <AnalysisSection result={result} />
+            <Dashboard result={result} />
 
             <SummarySection result={result} />
           
