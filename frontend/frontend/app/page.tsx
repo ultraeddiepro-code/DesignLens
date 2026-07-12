@@ -98,29 +98,62 @@ export default function Home() {
         />
 
         {result && (
-  <>
+          <>
+
             <Dashboard result={result} />
 
-            <SummarySection result={result} />
-          
-            <CompositionSection result={result} />
-            
-            <HierarchySection result={result} />
+            <div className="grid lg:grid-cols-2 gap-6 mb-8">
 
-            <HarmonySection result={result} />
+              <PreviewSection
+                previewUrl={previewUrl}
+              />
 
-            <KeywordsSection result={result} />
+              <SummarySection
+                result={result}
+              />
 
-            <AccessibilitySection result={result} />
+            </div>
 
-            <PaletteSection result={result} />
+            <CritiqueSection
+              result={result}
+            />
 
-            <TypographySection result={result} />
+            <div className="grid lg:grid-cols-2 gap-6">
 
-            <ContrastSection result={result} />
+              <CompositionSection
+                result={result}
+              />
 
-            <CritiqueSection result={result} />            
-            
+              <HierarchySection
+                result={result}
+              />
+
+              <HarmonySection
+                result={result}
+              />
+
+              <ContrastSection
+                result={result}
+              />
+
+              <AccessibilitySection
+                result={result}
+              />
+
+              <TypographySection
+                result={result}
+              />
+
+            </div>
+
+            <KeywordsSection
+              result={result}
+            />
+
+            <PaletteSection
+              result={result}
+            />
+
           </>
         )}
 
