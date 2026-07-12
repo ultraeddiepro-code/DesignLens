@@ -121,8 +121,6 @@ export default function Home() {
 
             <CritiqueSection result={result} />
 
-            <HarmonySection result={result} />
-
             <ContrastSection result={result} />
 
             <AccessibilitySection result={result} />
