@@ -36,4 +36,21 @@ export default function Dashboard({
         value={result.layout.layout}
       />
 
-  
+      <StatCard
+        title="Harmony"
+        value={result.harmony.scheme}
+      />
+
+      <StatCard
+        title="Accessibility"
+        value={`${result.accessibility.score}/100`}
+      />
+
+      <StatCard
+        title="Typography"
+        value={result.typography.readability}
+      />
+
+    </div>
+  );
+}
