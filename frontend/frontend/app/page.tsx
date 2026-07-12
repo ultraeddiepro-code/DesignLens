@@ -16,6 +16,7 @@ import HierarchySection from "../components/HierarchySection";
 import TypographySection from "../components/TypographySection";
 import ContrastSection from "../components/ContrastSection";
 import CritiqueSection from "../components/CritiqueSection";
+import Dashboard from "../components/Dashboard";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
