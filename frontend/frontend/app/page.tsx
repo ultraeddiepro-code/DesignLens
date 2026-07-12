@@ -121,8 +121,6 @@ export default function Home() {
 
             <CritiqueSection result={result} />            
 
-            <AccessibilitySection result={result} />
-
             <PaletteSection result={result} />
             
           </>
