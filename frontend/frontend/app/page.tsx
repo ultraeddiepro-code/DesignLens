@@ -25,6 +25,8 @@ export default function Home() {
   const [result, setResult] =
     useState<AnalysisResult | null>(null);
 
+  const [activeTab, setActiveTab] = useState("Overview");
+  
   const analyzeImage = async () => {
     if (!file) {
       alert("Please select an image.");
