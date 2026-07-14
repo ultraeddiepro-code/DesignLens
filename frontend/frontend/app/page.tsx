@@ -111,7 +111,35 @@ export default function Home() {
                     previewUrl={previewUrl}
                   />
 
-           
+                  <SummarySection
+                    result={result}
+                  />
+                </div>
+
+                <CritiqueSection
+                  result={result}
+                />
+              </>
+            )}
+
+            {activeTab === "Colors" && (
+              <>
+                <HarmonySection
+                  result={result}
+                />
+
+                <ContrastSection
+                  result={result}
+                />
+
+                <PaletteSection
+                  result={result}
+                />
+              </>
+            )}
+
+            
+        )}
 
       </div>
     </main>
