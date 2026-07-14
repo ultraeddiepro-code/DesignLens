@@ -97,7 +97,6 @@ export default function Home() {
 
         {result && (
           <>
-
             <Dashboard result={result} />
 
             <Tabs
@@ -105,48 +104,14 @@ export default function Home() {
               setActive={setActiveTab}
             />
 
-            <div className="grid lg:grid-cols-2 gap-6 mb-8">
+            {activeTab === "Overview" && (
+              <>
+                <div className="grid lg:grid-cols-2 gap-6 mb-8">
+                  <PreviewSection
+                    previewUrl={previewUrl}
+                  />
 
-              <PreviewSection
-                previewUrl={previewUrl}
-              />
-
-            </div>
-
-            <CritiqueSection
-              result={result}
-            />
-
-            <div className="grid lg:grid-cols-2 gap-6">
-
-              <HarmonySection
-                result={result}
-              />
-
-              <ContrastSection
-                result={result}
-              />
-
-              <AccessibilitySection
-                result={result}
-              />
-
-              <TypographySection
-                result={result}
-              />
-
-            </div>
-
-            <KeywordsSection
-              result={result}
-            />
-
-            <PaletteSection
-              result={result}
-            />
-
-          </>
-        )}
+           
 
       </div>
     </main>
