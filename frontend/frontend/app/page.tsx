@@ -4,7 +4,6 @@ import { useState } from "react";
 import { AnalysisResult } from "../types/analysis";
 import UploadSection from "../components/UploadSection";
 import PreviewSection from "../components/PreviewSection";
-import AnalysisSection from "../components/AnalysisSection";
 import SummarySection from "../components/SummarySection";
 import AccessibilitySection from "../components/AccessibilitySection";
 import PaletteSection from "../components/PaletteSection";
