@@ -17,7 +17,7 @@ export default function PaletteSection({
         {result.palette.map((color, index) => (
           <div
             key={index}
-            className="bg-zinc-900 border border-zinc-700 rounded-xl p-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5"
+            className="bg-zinc-900 border border-zinc-700 rounded-xl p-full "
           >
             <div
               className="w-full h-24 rounded-lg border"
