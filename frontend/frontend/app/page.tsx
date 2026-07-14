@@ -156,7 +156,24 @@ export default function Home() {
               </>
             )}
 
-            
+            {activeTab === "Accessibility" && (
+              <AccessibilitySection
+                result={result}
+              />
+            )}
+
+            {activeTab === "AI Review" && (
+              <>
+                <CritiqueSection
+                  result={result}
+                />
+
+                <KeywordsSection
+                  result={result}
+                />
+              </>
+            )}
+          </>
         )}
 
       </div>
