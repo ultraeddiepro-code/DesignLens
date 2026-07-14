@@ -1,20 +1,27 @@
 "use client";
 
 import { useState } from "react";
+
 import { AnalysisResult } from "../types/analysis";
+
 import UploadSection from "../components/UploadSection";
 import PreviewSection from "../components/PreviewSection";
+import Dashboard from "../components/Dashboard";
+import Tabs from "../components/Tabs";
+
 import SummarySection from "../components/SummarySection";
-import AccessibilitySection from "../components/AccessibilitySection";
-import PaletteSection from "../components/PaletteSection";
-import KeywordsSection from "../components/KeywordsSection";
-import HarmonySection from "../components/HarmonySection";
+import CritiqueSection from "../components/CritiqueSection";
+
 import CompositionSection from "../components/CompositionSection";
 import HierarchySection from "../components/HierarchySection";
 import TypographySection from "../components/TypographySection";
+
+import HarmonySection from "../components/HarmonySection";
 import ContrastSection from "../components/ContrastSection";
-import CritiqueSection from "../components/CritiqueSection";
-import Dashboard from "../components/Dashboard";import Tabs from "../components/Tabs";
+import AccessibilitySection from "../components/AccessibilitySection";
+
+import PaletteSection from "../components/PaletteSection";
+import KeywordsSection from "../components/KeywordsSection";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
