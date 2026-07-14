@@ -18,7 +18,6 @@ import ContrastSection from "../components/ContrastSection";
 import CritiqueSection from "../components/CritiqueSection";
 import Dashboard from "../components/Dashboard";import Tabs from "../components/Tabs";
 
-
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState("");
@@ -100,6 +99,11 @@ export default function Home() {
           <>
 
             <Dashboard result={result} />
+
+            <Tabs
+              active={activeTab}
+              setActive={setActiveTab}
+            />
 
             <div className="grid lg:grid-cols-2 gap-6 mb-8">
 
