@@ -16,7 +16,8 @@ import HierarchySection from "../components/HierarchySection";
 import TypographySection from "../components/TypographySection";
 import ContrastSection from "../components/ContrastSection";
 import CritiqueSection from "../components/CritiqueSection";
-import Dashboard from "../components/Dashboard";
+import Dashboard from "../components/Dashboard";import Tabs from "../components/Tabs";
+
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
@@ -26,7 +27,7 @@ export default function Home() {
     useState<AnalysisResult | null>(null);
 
   const [activeTab, setActiveTab] = useState("Overview");
-  
+
   const analyzeImage = async () => {
     if (!file) {
       alert("Please select an image.");
