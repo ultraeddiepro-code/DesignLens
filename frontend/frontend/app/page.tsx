@@ -11,7 +11,6 @@ import PaletteSection from "../components/PaletteSection";
 import KeywordsSection from "../components/KeywordsSection";
 import HarmonySection from "../components/HarmonySection";
 import CompositionSection from "../components/CompositionSection";
-import { analyzeImage as analyzeApi } from "../lib/api";
 import HierarchySection from "../components/HierarchySection";
 import TypographySection from "../components/TypographySection";
 import ContrastSection from "../components/ContrastSection";
