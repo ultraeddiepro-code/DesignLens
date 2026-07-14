@@ -111,10 +111,6 @@ export default function Home() {
                 previewUrl={previewUrl}
               />
 
-              <SummarySection
-                result={result}
-              />
-
             </div>
 
             <CritiqueSection
