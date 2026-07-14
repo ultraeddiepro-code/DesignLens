@@ -119,10 +119,6 @@ export default function Home() {
 
             <div className="grid lg:grid-cols-2 gap-6">
 
-              <HierarchySection
-                result={result}
-              />
-
               <HarmonySection
                 result={result}
               />
