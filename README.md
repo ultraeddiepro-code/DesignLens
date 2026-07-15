@@ -1,130 +1,160 @@
-🎨 DesignLens
+# 🎨 DesignLens
 
-«AI-powered visual design analysis platform built with Next.js, FastAPI, and Python.»
+> AI-powered visual design analysis platform built using **Next.js**, **FastAPI**, **TypeScript**, and **Python**.
 
-DesignLens analyzes uploaded images and provides actionable design insights including color palette extraction, style recognition, accessibility analysis, composition evaluation, color harmony, visual hierarchy, typography metrics, and an overall design score.
+DesignLens analyzes uploaded images and provides detailed insights into color, composition, accessibility, typography, hierarchy, harmony, contrast, and overall design quality.
 
 ---
 
-✨ Features
+# ✨ Features
 
-🎨 Color Analysis
-
-- Extract dominant colors using K-Means clustering
+## 🎨 Color Analysis
+- Dominant color extraction using K-Means clustering
 - HEX & RGB values
 - Human-readable color names
-- Visual color palette
+- Color palette visualization
 
-🖌 Style Detection
-
-Automatically identifies design styles such as:
-
-- Minimalist
-- Vibrant
-- Dark / Moody
-- Balanced Design
-
-😊 Mood Detection
-
-Predicts the overall mood of the design.
+## 🖌 Style Detection
+Automatically identifies design style.
 
 Examples:
+- Minimalist
+- Vibrant
+- Balanced
+- Dark / Moody
 
-- Minimal
+## 😊 Mood Detection
+Predicts the emotional feel of the design.
+
+Examples:
 - Professional
 - Energetic
 - Elegant
-- Dark
+- Minimal
 - Neutral
 
-📄 Content Detection
-
-Recognizes the image category.
-
-Current support:
-
-- Poster
-- Banner
-- Square Design
-- Landscape Design
-
-📐 Layout Analysis
-
-Detects overall layout orientation.
+## 📄 Content Detection
+Recognizes the type of uploaded design.
 
 Examples:
+- Poster
+- Banner
+- Social Media Graphic
+- Landscape
+- Square Design
 
-- Vertical Poster
-- Horizontal Banner
+## 📐 Layout Analysis
+Detects the overall structure of the design.
+
+Examples:
+- Vertical Layout
+- Horizontal Layout
 - Balanced Layout
 
-⭐ Design Score
+## ⭐ Design Score
+Calculates an overall design quality score out of 100.
 
-Generates an overall design quality score (0–100).
-
-♿ Accessibility Analysis
-
-Evaluates design accessibility.
-
-Provides:
-
-- Accessibility Score
-- Improvement Suggestions
-
-🎯 Composition Analysis
-
+## 🎯 Composition Analysis
 Analyzes:
 
-- Visual Balance
+- Balance
 - Symmetry
 - Rule of Thirds
 - Focus Point
-- Composition Suggestions
+- Improvement Suggestions
 
-🌈 Color Harmony
-
-Detects harmony scheme:
-
-- Monochromatic
-- Analogous
-- Triadic
-- Complementary
-- Mixed
-
-🧠 Visual Hierarchy
-
+## 🧠 Visual Hierarchy
 Evaluates:
 
 - Primary Focus
 - Secondary Focus
 - Reading Order
 - Hierarchy Score
-- Improvement Suggestions
+- Suggestions
 
-✍ Typography Analysis
+## 🌈 Color Harmony
+Detects:
 
+- Monochromatic
+- Analogous
+- Complementary
+- Triadic
+- Mixed Harmony
+
+## ♿ Accessibility Analysis
+Evaluates readability and accessibility.
+
+Returns:
+- Accessibility Score
+- Suggestions
+
+## ✍ Typography Analysis
 Measures:
 
 - Text Density
 - Readability
 - Typography Suggestions
 
-📝 Design Summary
+## ⚖ Contrast Analysis
+Calculates:
 
-Generates a concise summary describing the overall design characteristics.
+- Contrast Ratio
+- WCAG Rating
+- Accessibility Grade
+
+## 🤖 AI Design Critique
+Provides:
+
+- Design Summary
+- Strengths
+- Weaknesses
+- Improvement Suggestions
+
+## 📊 Interactive Dashboard
+Modern dashboard displaying:
+
+- Design Score
+- Style
+- Mood
+- Layout
+- Typography
+- Accessibility
+- Harmony
+
+## 📑 Tabbed Interface
+Organized results into tabs:
+
+- Overview
+- Colors
+- Composition
+- Accessibility
+- AI Review
 
 ---
 
-🛠 Tech Stack
+# 🖼 Current UI
 
-Frontend
+- Hero landing section
+- Upload component
+- Image preview
+- Dashboard cards
+- AI critique panel
+- Color palette visualization
+- Interactive tab navigation
+- Responsive layout
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
 
 - Next.js 16
 - React 19
 - TypeScript
 - Tailwind CSS
 
-Backend
+## Backend
 
 - FastAPI
 - Python
@@ -134,18 +164,20 @@ Backend
 
 ---
 
-📂 Project Structure
+# 📂 Project Structure
 
-DesignLens/
+```text
+DesignLens
 │
-├── backend/
-│   ├── analyzers/
+├── backend
+│   ├── analyzers
 │   │   ├── accessibility.py
 │   │   ├── colors.py
 │   │   ├── color_names.py
 │   │   ├── composition.py
 │   │   ├── content.py
 │   │   ├── contrast.py
+│   │   ├── critique.py
 │   │   ├── harmony.py
 │   │   ├── hierarchy.py
 │   │   ├── layout.py
@@ -154,33 +186,37 @@ DesignLens/
 │   │   ├── style.py
 │   │   └── typography.py
 │   │
-│   ├── uploads/
+│   ├── uploads
 │   └── app.py
 │
-├── frontend/
-│   ├── app/
-│   ├── components/
-│   ├── lib/
-│   ├── public/
-│   ├── types/
-│   └── package.json
+├── frontend
+│   ├── app
+│   ├── components
+│   ├── lib
+│   ├── public
+│   ├── styles
+│   └── types
 │
 └── README.md
+```
 
 ---
 
-🚀 Getting Started
+# 🚀 Installation
 
-Clone Repository
+## Clone Repository
 
+```bash
 git clone https://github.com/6thAce/DesignLens.git
 
 cd DesignLens
+```
 
 ---
 
-Backend
+## Backend Setup
 
+```bash
 cd backend
 
 pip install fastapi
@@ -189,53 +225,67 @@ pip install pillow
 pip install numpy
 pip install scikit-learn
 pip install python-multipart
+```
 
-Run:
+Run server
 
+```bash
 uvicorn app:app --reload
+```
 
-Backend URL
+Backend
 
+```
 http://127.0.0.1:8000
+```
 
-Swagger API
+Swagger Docs
 
+```
 http://127.0.0.1:8000/docs
+```
 
 ---
 
-Frontend
+## Frontend Setup
 
+```bash
 cd frontend
 
 npm install
 
 npm run dev
+```
 
 Open
 
+```
 http://localhost:3000
+```
 
 ---
 
-API
+# API
 
-Analyze Image
+## POST
 
-Endpoint
+```
+/analyze
+```
 
-POST /analyze
+### Request
 
-Request
-
+```
 multipart/form-data
 
 file
+```
 
-Response
+### Example Response
 
+```json
 {
-  "filename": "design.jpg",
+  "filename": "poster.png",
   "palette": [],
   "style": {},
   "content_type": "Poster",
@@ -244,100 +294,132 @@ Response
   "composition": {},
   "hierarchy": {},
   "typography": {},
-  "harmony": {},
   "contrast": {},
+  "harmony": {},
   "accessibility": {},
-  "design_score": 91
+  "critique": {},
+  "design_score": 92
 }
+```
 
 ---
 
-Current Modules
+# Current Modules
 
-Module| Status
-Image Upload| ✅
-Preview| ✅
-Color Palette| ✅
-Color Naming| ✅
-Style Detection| ✅
-Mood Detection| ✅
-Content Detection| ✅
-Layout Analysis| ✅
-Composition Analysis| ✅
-Color Harmony| ✅
-Contrast Analysis| ✅
-Accessibility Analysis| ✅
-Typography Analysis| ✅
-Visual Hierarchy| ✅
-Design Summary| ✅
-Design Score| ✅
+| Module | Status |
+|----------|--------|
+| Upload Image | ✅ |
+| Preview Image | ✅ |
+| Dashboard | ✅ |
+| Tab Navigation | ✅ |
+| Color Palette | ✅ |
+| Color Naming | ✅ |
+| Style Detection | ✅ |
+| Mood Detection | ✅ |
+| Content Detection | ✅ |
+| Layout Analysis | ✅ |
+| Composition Analysis | ✅ |
+| Visual Hierarchy | ✅ |
+| Typography Analysis | ✅ |
+| Color Harmony | ✅ |
+| Contrast Analysis | ✅ |
+| Accessibility Analysis | ✅ |
+| AI Design Critique | ✅ |
+| Design Summary | ✅ |
+| Overall Design Score | ✅ |
 
 ---
 
-Roadmap
+# Upcoming Features
 
-Phase 1 ✅
+## Export
 
-- Image Upload
-- Palette Extraction
-- Style Detection
-- Mood Detection
-- Layout Detection
-
-Phase 2 ✅
-
-- Accessibility Analysis
-- Composition Analysis
-- Harmony Detection
-- Typography Analysis
-- Hierarchy Analysis
-
-Phase 3 🚧
-
-- AI Design Critique
-- Side-by-side Design Comparison
-- Export PDF Reports
+- PDF Report
 - JSON Export
-- Analysis History
+- PNG Report
+
+## AI
+
+- AI-powered Redesign Suggestions
+- Layout Optimization
+- Smart Color Recommendations
+- Design Improvement Engine
+
+## Analysis
+
+- OCR Text Detection
+- Font Recognition
+- Whitespace Analysis
+- Alignment Detection
+- Icon Detection
+- Logo Detection
+
+## User Experience
+
 - Drag & Drop Upload
+- Batch Image Analysis
+- Image Comparison
+- Analysis History
+- Dark / Light Theme
 
-Phase 4
+---
 
-- Brand Consistency Analysis
-- UI Screenshot Analysis
-- Social Media Creative Analysis
-- Typography Recognition using OCR
-- AI Redesign Suggestions
-- Batch Image Processing
+# Roadmap
+
+## Version 1.0 ✅
+- Color Analysis
+- Style Detection
+- Dashboard
+- Accessibility
+- Typography
+- Hierarchy
+- Harmony
+- Contrast
+- AI Critique
+
+## Version 1.5 🚧
+- Export Reports
+- Comparison Tool
+- OCR
+- Better UI
+- History
+
+## Version 2.0
+- AI Redesign Assistant
+- Figma Support
+- Website Screenshot Analysis
+- Social Media Analysis
+- Brand Consistency Checker
 - Cloud Deployment
+- User Accounts
 
 ---
 
-Future Vision
+# Why DesignLens?
 
-DesignLens aims to become an AI-powered design assistant capable of evaluating graphics, posters, UI screenshots, social media creatives, presentations, and marketing assets while providing practical, actionable feedback for designers, developers, and content creators.
+DesignLens helps designers, developers, marketers, students, and content creators quickly evaluate visual designs using AI-assisted analysis and actionable feedback.
 
 ---
 
-Contributing
+# Contributing
 
 Contributions are welcome.
 
 1. Fork the repository.
-2. Create a feature branch.
+2. Create a new branch.
 3. Commit your changes.
 4. Open a Pull Request.
 
 ---
 
-License
+# License
 
-This project is licensed under the MIT License.
+MIT License
 
 ---
 
-Author
+# Author
 
-Anuj Dubey
+**Anuj Dubey**
 
 GitHub: https://github.com/6thAce
