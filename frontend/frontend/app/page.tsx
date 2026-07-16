@@ -108,7 +108,7 @@ export default function Home() {
             <ExportButtons
               result={result}
             />
-
+            
             <Tabs
               active={activeTab}
               setActive={setActiveTab}
@@ -187,14 +187,20 @@ export default function Home() {
           </>
         )}
 
-        <ExportButtons result={result} />
-        
         {loading && (
-          <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-            <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-8">
-              <p className="text-xl font-semibold">
+          <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="bg-zinc-900 border border-zinc-700 rounded-2xl p-8 flex flex-col items-center gap-4">
+
+              <div className="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
+
+              <p className="text-lg font-semibold">
                 Analyzing your design...
               </p>
+
+              <p className="text-gray-400 text-sm">
+                This may take a few seconds.
+              </p>
+
             </div>
           </div>
         )}
