@@ -96,9 +96,13 @@ export default function Home() {
             setFile(selectedFile);
 
             if (selectedFile) {
-              setPreviewUrl(
-                URL.createObjectURL(selectedFile)
-              );
+
+                setPreviewUrl(
+                    URL.createObjectURL(selectedFile)
+                );
+
+                setFileName(selectedFile.name);
+
             }
           }}
         />
