@@ -9,6 +9,7 @@ interface Props {
 
 export default function UploadSection({
   loading,
+  fileName,
   onAnalyze,
   onFileChange,
 }: Props) {
