@@ -179,6 +179,15 @@ export default function Home() {
                 />
               </>
             )}
+
+            <Dashboard result={result} />
+
+              <ExportButtons result={result} />
+
+              <Tabs
+                active={activeTab}
+                setActive={setActiveTab}
+              />
           </>
         )}
 
