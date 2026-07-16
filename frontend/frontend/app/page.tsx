@@ -188,6 +188,16 @@ export default function Home() {
         )}
 
       </div>
+      
+      {loading && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+          <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-8">
+            <p className="text-xl font-semibold">
+              Analyzing your design...
+            </p>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
