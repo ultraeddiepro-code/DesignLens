@@ -1,5 +1,6 @@
 interface Props {
   loading: boolean;
+  fileName: string;
   onAnalyze: () => void;
   onFileChange: (
     e: React.ChangeEvent<HTMLInputElement>
