@@ -88,6 +88,7 @@ export default function Home() {
 
         <UploadSection
           loading={loading}
+          fileName={fileName}
           onAnalyze={analyzeImage}
           onFileChange={(e) => {
             const selectedFile =
