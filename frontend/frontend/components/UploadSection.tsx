@@ -52,7 +52,21 @@ export default function UploadSection({
           {loading ? "Analyzing..." : "Analyze Design"}
         </button>
       </div>
+      {fileName && (
 
+            <p className="mt-4 text-center text-gray-400">
+
+                Selected File:
+
+                <span className="text-white ml-2">
+
+                    {fileName}
+
+                </span>
+
+            </p>
+
+        )}
     </div>
   );
 }
