@@ -33,6 +33,8 @@ export default function Home() {
 
   const [activeTab, setActiveTab] = useState("Overview");
 
+  const [fileName, setFileName] = useState("");
+
   const analyzeImage = async () => {
     if (!file) {
       alert("Please select an image.");
