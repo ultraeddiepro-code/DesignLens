@@ -22,6 +22,7 @@ import AccessibilitySection from "../components/AccessibilitySection";
 
 import PaletteSection from "../components/PaletteSection";
 import KeywordsSection from "../components/KeywordsSection";
+import ExportButtons from "../components/ExportButtons";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
