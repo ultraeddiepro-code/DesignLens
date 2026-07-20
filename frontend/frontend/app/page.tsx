@@ -109,7 +109,7 @@ export default function Home() {
         />
 
         {result && (
-          <>
+          <div id="report">
             <Dashboard result={result} />
 
             <ExportButtons
@@ -191,7 +191,7 @@ export default function Home() {
               </>
             )}
           
-          </>
+          </div>
         )}
 
         {loading && (
